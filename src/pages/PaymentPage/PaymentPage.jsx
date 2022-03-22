@@ -41,7 +41,7 @@ const PaymentPage = () => {
   }
   useEffect(() => {
     const addPayPalScript = async () => {
-      const { data: clientId } = await axios.get('/paypalclient')
+      const { data: clientId } = await axios.get(`${API}/paypalclient`)
       const script = document.createElement('script')
       script.type = 'text/javascript'
       script.async = true

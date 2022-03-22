@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <Container className='text-center'>
-        <h1>Footer</h1>
+        <h5>Contact : pizzashere@hotmail.com</h5>
       </Container>
     </>
   )
