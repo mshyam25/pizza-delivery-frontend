@@ -73,6 +73,14 @@ const PaymentPage = () => {
   return (
     <Container className='my-5 payment-page'>
       <Row>
+        {!userInfo.isAdmin && (
+          <>
+            <h3>Use below fake payment details</h3>
+            <h5>sb-zkzqv14256732@personal.example.com</h5>
+            <h5>sjT0J^:B</h5>
+          </>
+        )}
+
         {loading ? (
           <Loader />
         ) : error ? (
