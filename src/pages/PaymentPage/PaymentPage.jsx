@@ -2,7 +2,7 @@ import React from 'react'
 import { PayPalButton } from 'react-paypal-button-v2'
 import axios from 'axios'
 import './styles.css'
-import { API } from '../../api'
+import API from '../../api'
 import {
   Container,
   Row,
