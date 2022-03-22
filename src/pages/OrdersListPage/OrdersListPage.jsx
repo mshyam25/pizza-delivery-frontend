@@ -82,6 +82,7 @@ const OrdersListPage = () => {
                 {orders.map((order) => (
                   <tr key={order._id}>
                     <td>{order._id}</td>
+                    {console.log(order)}
                     <td>{order.user}</td>
                     <td>{order.createdAt}</td>
                     <td>
