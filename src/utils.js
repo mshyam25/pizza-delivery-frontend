@@ -2,8 +2,7 @@ const validation = (name, email, password) => {
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/
   const namePattern = /^[a-zA-Z ]{2,16}$/
-  const passwordPattern =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/
 
   if (name) {
     if (!namePattern.test(name)) {
@@ -17,7 +16,7 @@ const validation = (name, email, password) => {
   }
   if (password) {
     if (!passwordPattern.test(password)) {
-      return 'Passowrd should contain Minimum eight characters, at least one letter, one number and one special character'
+      return 'Password should contain Minimum six characters, at least one letter and one number'
     }
   }
   return 'Validations Passed'
