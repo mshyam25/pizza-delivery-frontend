@@ -69,8 +69,6 @@ export const registerUser =
       )
 
       dispatch({ type: userConstants.USER_REGISTER_SUCCESS, payload: data })
-      dispatch({ type: userConstants.USER_LOGIN_SUCCESS, payload: data })
-      localStorage.setItem('currentUser', JSON.stringify(data))
     } catch (error) {
       dispatch({
         type: userConstants.USER_REGISTER_FAIL,
