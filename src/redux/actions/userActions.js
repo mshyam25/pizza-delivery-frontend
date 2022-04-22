@@ -69,8 +69,8 @@ export const registerUser =
       )
 
       dispatch({ type: userConstants.USER_REGISTER_SUCCESS, payload: data })
-      // dispatch({ type: userConstants.USER_LOGIN_SUCCESS, payload: data })
-      // localStorage.setItem('currentUser', JSON.stringify(data))
+      dispatch({ type: userConstants.USER_LOGIN_SUCCESS, payload: data })
+      localStorage.setItem('currentUser', JSON.stringify(data))
     } catch (error) {
       dispatch({
         type: userConstants.USER_REGISTER_FAIL,
@@ -175,7 +175,7 @@ export const getUserList = () => async (dispatch, getState) => {
   }
 }
 
-export const findUser = (email) => async (dispatch) => {
+export const findUserByEmail = (email) => async (dispatch) => {
   try {
     dispatch({ type: userConstants.USER_BY_EMAIL_REQUEST })
 
