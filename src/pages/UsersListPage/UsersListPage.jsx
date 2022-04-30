@@ -12,8 +12,10 @@ import { Table, Button } from 'react-bootstrap'
 const UsersListPage = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
+
   const userList = useSelector((state) => state.userList)
   const { users, loading, error } = userList
 
