@@ -7,7 +7,7 @@ import Loader from '../../components/Loader/Loader'
 import validation from '../../utils'
 import {
   confirmUser,
-  findUser,
+  findUserByEmail,
   updatePassword,
 } from '../../redux/actions/userActions'
 
@@ -35,7 +35,7 @@ const ForgotPasswordPage = () => {
 
   const submitEmailHandler = (e) => {
     e.preventDefault()
-    dispatch(findUser(email))
+    dispatch(findUserByEmail(email))
   }
 
   const submitSecurityHandler = (e) => {
